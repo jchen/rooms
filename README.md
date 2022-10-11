@@ -3,9 +3,9 @@
 
 A dashboard for booking rooms in the CIT at Brown University. 
 
+![screenshot](./screenshot.png)
 
 ## Installation
-Run 
 ```bash
 npm install
 ```
@@ -14,5 +14,5 @@ npm install
 ## Build Commands
 
 ```bash
-npm run build # builds into dist folder
+npm run build # builds into `dist` folder
 ```
