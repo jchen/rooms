@@ -1,0 +1,19 @@
+.fc-timeline-slot-cushion {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+.fc-timeline-slot-cushion:hover {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+.tippy-box {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.roomlink {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
