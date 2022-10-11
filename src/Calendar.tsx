@@ -19,7 +19,7 @@ export default class Calendar extends React.Component<{}> {
           right: 'resourceTimelineDay,resourceTimelineWeek'
         }}
         initialView='resourceTimelineDay'
-        resourceAreaWidth='20%'
+        resourceAreaWidth='250px'
         resourceGroupField='floor'
         resourceAreaColumns={[
           {
@@ -33,7 +33,7 @@ export default class Calendar extends React.Component<{}> {
         editable={false}
         eventSources={RESOURCES.map(createEventSource)}
         themeSystem='bootstrap5'
-        height='80vh'
+        height='auto'
       />
     )
   }

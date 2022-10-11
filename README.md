@@ -12,7 +12,10 @@ npm install
 
 
 ## Build Commands
-
 ```bash
 npm run build # builds into `dist` folder
+```
+To serve locally: 
+```bash
+npm run start
 ```
