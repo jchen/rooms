@@ -14,5 +14,5 @@ npm install
 ## Build Commands
 
 ```bash
-npm run start # builds and opens a web browser
+npm run build # builds into dist folder
 ```
