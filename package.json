@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "rooms",
-  "title": "Room availability calendar.",
+  "title": "Rooms @ CIT",
   "version": "0.0.0",
   "license": "GPLv3",
   "scripts": {
