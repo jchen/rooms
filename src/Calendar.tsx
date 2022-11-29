@@ -43,6 +43,7 @@ export default class Calendar extends React.Component<{}> {
         eventSources={RESOURCES.map(createEventSource)}
         themeSystem="bootstrap5"
         height="auto"
+        timeZone="America/New_York"
       />
     );
   }
