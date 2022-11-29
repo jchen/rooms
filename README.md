@@ -6,16 +6,17 @@ A dashboard for viewing room availability in the CIT at Brown University.
 ![screenshot](./screenshot.png)
 
 ## Installation
+(I use `yarn` but you can optionally use `npm`)
 ```bash
-npm install
+yarn install
 ```
 
 
 ## Build Commands
 ```bash
-npm run build # builds into `dist` folder
+yarn run build # builds into `dist` folder
 ```
 To serve locally: 
 ```bash
-npm run start
+yarn run start
 ```
