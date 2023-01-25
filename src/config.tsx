@@ -103,6 +103,15 @@ export const RESOURCES: RoomResource[] = [
       "c_1c91bd671e03ab4a0ba710e8f33250090aea517ab586f6e1aa965aca76d197a8@group.calendar.google.com",
   },
   {
+    id: "209",
+    floor: Floor.Second,
+    title: "CIT 209",
+    notes: "2 TAs",
+    managedBy: Managers.MTAs,
+    calendarId:
+      "c_f68c1cc435424ea61551754ecfd068f9e2162438ae5710962e1750797d165b84@group.calendar.google.com",
+  },
+  {
     id: "210",
     floor: Floor.Second,
     title: "CIT 210",
@@ -154,15 +163,6 @@ export const RESOURCES: RoomResource[] = [
     managedBy: Managers.Registrar,
     calendarId:
       "c_aa06f120dbe48a67d398aec07ce97944b212d404a4fd4ab726417171b5c83ba5@group.calendar.google.com",
-  },
-  {
-    id: "271",
-    floor: Floor.Second,
-    title: "CIT 271 (Fishbowl)",
-    notes: "6 TAs",
-    managedBy: Managers.MTAs,
-    calendarId:
-      "c_05a331b57f7c7f0f77cfb05d9aa7728574f49ea0ffb50cf304a553dcd548c567@group.calendar.google.com",
   },
   {
     id: "316",
