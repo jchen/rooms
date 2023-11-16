@@ -245,4 +245,40 @@ export const RESOURCES: RoomResource[] = [
     calendarId:
       "brown.edu_4353434954526f6f6d353036@resource.calendar.google.com",
   },
+  {
+    id: "506",
+    floor: Floor.Fifth,
+    title: "CIT 506",
+    notes: "30 / Conference",
+    managedBy: Managers.Reception,
+    calendarId:
+      "brown.edu_4353434954526f6f6d353036@resource.calendar.google.com",
+  },
+  {
+    id: "508",
+    floor: Floor.Fifth,
+    title: "CIT 508",
+    notes: "4 / Meeting Room",
+    managedBy: Managers.Reception,
+    calendarId:
+      "c_e0pjcm1r393ikntc6tju7g2a2k@group.calendar.google.com",
+  },
+  {
+    id: "510",
+    floor: Floor.Fifth,
+    title: "CIT 510",
+    notes: "4 / Meeting Room",
+    managedBy: Managers.Reception,
+    calendarId:
+      "c_2p7g2rqlrvk9d1rouoo4n2qeh0@group.calendar.google.com",
+  },
+  {
+    id: "512",
+    floor: Floor.Fifth,
+    title: "CIT 512",
+    notes: "4 / Meeting Room",
+    managedBy: Managers.Reception,
+    calendarId:
+      "c_df9j2h02o8tkb7ifoghmhc80pk@group.calendar.google.com",
+  },
 ];

@@ -23,8 +23,8 @@ export default class App extends React.Component<{}> {
         <Container style={{ paddingTop: "1.5em", paddingBottom: "3em" }}>
           <Row>
             <Alert variant="info">
-              This tool is a work-in-progress. Currently, it only supports{" "}
-              <i>viewing</i> room availability in the CIT. Please direct
+              Welcome to <b>rooms.cs.brown.edu</b>. You can view room available within
+              the CIT using this tool. Please direct
               bookings to <a href="mailto:mta@cs.brown.edu">mta@cs.brown.edu</a>
               ,{" "}
               <a href="mailto:reception@cs.brown.edu">reception@cs.brown.edu</a>
