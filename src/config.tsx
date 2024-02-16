@@ -156,6 +156,15 @@ export const RESOURCES: RoomResource[] = [
       "c_20a343a6f0cd5890764ea4284857b56b14d1fc655f15fe1f14407cc382c00926@group.calendar.google.com",
   },
   {
+    id: "267",
+    floor: Floor.Second,
+    title: "CIT 267",
+    notes: "20 / Lab Room",
+    managedBy: Managers.MTAs,
+    calendarId:
+      "c_639244dcec4d779240532ea7692a449ee86924ea5bb7c12ce63f83bd657f2434@group.calendar.google.com",
+  },
+  {
     id: "269",
     floor: Floor.Second,
     title: "CIT 269",
