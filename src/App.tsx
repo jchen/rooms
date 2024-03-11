@@ -31,9 +31,6 @@ export default class App extends React.Component<{}> {
               specified by hovering over the tag in bold. Clicking on a room
               will link to the room's Google Calendar.
             </Alert>
-            <Alert variant="danger">
-              We are aware that the calendar for <b>CIT Room 210</b> is out of order. Your room bookings might not show on this calendar. You should verify with the Google calendar of this room that it is available for your specific booking. Please email us if you have any questions. Thanks!
-            </Alert>
           </Row>
           <Row className="justify-content-lg-center">
             <Col>
