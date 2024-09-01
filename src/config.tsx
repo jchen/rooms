@@ -151,27 +151,18 @@ export const RESOURCES: RoomResource[] = [
     floor: Floor.Second,
     title: "CIT 265",
     notes: "24 / Seminar Room",
-    managedBy: Managers.Registrar,
-    calendarId:
-      "c_20a343a6f0cd5890764ea4284857b56b14d1fc655f15fe1f14407cc382c00926@group.calendar.google.com",
-  },
-  {
-    id: "267",
-    floor: Floor.Second,
-    title: "CIT 267",
-    notes: "20 / Lab Room",
     managedBy: Managers.MTAs,
     calendarId:
-      "c_639244dcec4d779240532ea7692a449ee86924ea5bb7c12ce63f83bd657f2434@group.calendar.google.com",
+      "c_bc6afcb3083f58ff0dccd2bc9204a3d1691f8cc8caaf3627b149a273e3d55e16@group.calendar.google.com",
   },
   {
     id: "269",
     floor: Floor.Second,
     title: "CIT 269",
     notes: "24 / Seminar Room",
-    managedBy: Managers.Registrar,
+    managedBy: Managers.MTAs,
     calendarId:
-      "c_aa06f120dbe48a67d398aec07ce97944b212d404a4fd4ab726417171b5c83ba5@group.calendar.google.com",
+      "c_edca34404bb08c706b2314217a26e1ad5d2480f52c22bbd4d874ec1bd039a485@group.calendar.google.com",
   },
   {
     id: "316",
