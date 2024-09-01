@@ -246,15 +246,6 @@ export const RESOURCES: RoomResource[] = [
       "brown.edu_4353434954526f6f6d353036@resource.calendar.google.com",
   },
   {
-    id: "506",
-    floor: Floor.Fifth,
-    title: "CIT 506",
-    notes: "30 / Conference",
-    managedBy: Managers.Reception,
-    calendarId:
-      "brown.edu_4353434954526f6f6d353036@resource.calendar.google.com",
-  },
-  {
     id: "508",
     floor: Floor.Fifth,
     title: "CIT 508",
