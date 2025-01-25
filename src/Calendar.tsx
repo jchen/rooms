@@ -1,5 +1,5 @@
 // organize-imports-disable-next-line
-import FullCalendar from "@fullcalendar/react";
+import FullCalendar, { CssDimValue } from "@fullcalendar/react";
 // organize-imports-disable-next-line
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 // organize-imports-disable-next-line
@@ -13,7 +13,8 @@ import {
   createResource,
   getGoogleCalendarLink,
   getManagedByDescription,
-  getManagedByTag
+  getManagedByTag,
+  getResourceNotes
 } from "./utils";
 
 export default class Calendar extends React.Component<{}> {
@@ -28,7 +29,7 @@ export default class Calendar extends React.Component<{}> {
           right: "resourceTimelineDay,resourceTimelineWeek",
         }}
         initialView="resourceTimelineDay"
-        resourceAreaWidth="250px"
+        resourceAreaWidth={this.responsiveResourceSize()}
         resourceGroupField="floor"
         resourceAreaColumns={[
           {
@@ -48,6 +49,10 @@ export default class Calendar extends React.Component<{}> {
     );
   }
 
+  responsiveResourceSize = () => {
+    return window.screen.width > 500 ? "225px" as CssDimValue : "150px" as CssDimValue
+  }
+
   handleResourceLabelDidMount = (info: any) => {
     const link = document.createElement("a");
     link.href = getGoogleCalendarLink(info.resource.title) ?? "";
@@ -64,8 +69,9 @@ export default class Calendar extends React.Component<{}> {
     console.log(info);
     tag.innerText = ` ${getManagedByTag(info.resource.title)} `;
     info.el.querySelector(".fc-datagrid-cell-main").appendChild(tag);
+    var combined_content = `Notes: ${getResourceNotes(info.resource.title)} <br/> ${getManagedByDescription(info.resource.title)}`;
     tippy(`#${tag.id}`, {
-      content: getManagedByDescription(info.resource.title),
+      content: combined_content,
       delay: [200, 0],
       allowHTML: true,
       theme: "light",

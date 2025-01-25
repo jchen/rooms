@@ -70,3 +70,14 @@ export function getGoogleCalendarLink(name: string) {
     return `https://calendar.google.com/calendar/a/brown.edu/r?cid=${room.calendarId}`;
   }
 }
+
+export function getResourceNotes(name: string) {
+  /**
+   * Notes for a given room.
+   */
+  const room = RESOURCES.find((r) => r.title === name);
+  if (room) {
+    return room.notes
+  }
+  return "N/A."
+}

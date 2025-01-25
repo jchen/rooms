@@ -70,7 +70,7 @@ export const RESOURCES: RoomResource[] = [
     id: "201",
     floor: Floor.Second,
     title: "CIT 201 (SATLab)",
-    notes: "4 TAs / Linux",
+    notes: "4 / Linux",
     managedBy: Managers.MTAs,
     calendarId:
       "c_c60c30904a6ede56e6422871a4651923b17b7f529380f9a3154bc80e209463f9@group.calendar.google.com",
@@ -88,7 +88,7 @@ export const RESOURCES: RoomResource[] = [
     id: "205",
     floor: Floor.Second,
     title: "CIT 205",
-    notes: "4 TAs / Linux, Whiteboards",
+    notes: "4 / Linux, Whiteboards",
     managedBy: Managers.MTAs,
     calendarId:
       "c_97716fc018294e495072e7c962d5bba6da5f439bd67a774422c4304ed3230a40@group.calendar.google.com",
@@ -97,7 +97,7 @@ export const RESOURCES: RoomResource[] = [
     id: "207",
     floor: Floor.Second,
     title: "CIT 207 (Nook)",
-    notes: "2 TAs / Whiteboards",
+    notes: "2 / Whiteboards",
     managedBy: Managers.MTAs,
     calendarId:
       "c_1c91bd671e03ab4a0ba710e8f33250090aea517ab586f6e1aa965aca76d197a8@group.calendar.google.com",
@@ -106,7 +106,7 @@ export const RESOURCES: RoomResource[] = [
     id: "209",
     floor: Floor.Second,
     title: "CIT 209",
-    notes: "2 TAs",
+    notes: "5 TAs",
     managedBy: Managers.MTAs,
     calendarId:
       "c_f68c1cc435424ea61551754ecfd068f9e2162438ae5710962e1750797d165b84@group.calendar.google.com",
@@ -115,7 +115,7 @@ export const RESOURCES: RoomResource[] = [
     id: "210",
     floor: Floor.Second,
     title: "CIT 210",
-    notes: "18 / Swipe",
+    notes: "18 / Swipe, Whiteboards",
     managedBy: Managers.Reception,
     calendarId: "c_18829ci003j5qjtsnfp28e8gakdv0@resource.calendar.google.com",
   },
@@ -123,7 +123,7 @@ export const RESOURCES: RoomResource[] = [
     id: "219",
     floor: Floor.Second,
     title: "CIT 219 (Outback)",
-    notes: "6 TAs / Whiteboards",
+    notes: "45 / Whiteboards",
     managedBy: Managers.Registrar,
     calendarId:
       "c_54550b1ab3bb4506a3c7e6eabc6746c8c8c8b193d8ec9d63ad7329773228458e@group.calendar.google.com",
@@ -132,7 +132,7 @@ export const RESOURCES: RoomResource[] = [
     id: "227",
     floor: Floor.Second,
     title: "CIT 227 (Moonlab)",
-    notes: "6 TAs / Whiteboards",
+    notes: "45 / Whiteboards",
     managedBy: Managers.Registrar,
     calendarId:
       "c_65576be3a25bee54021b2310fe9b6c35a4acd817effa38efc970ee148b277f43@group.calendar.google.com",
@@ -150,7 +150,7 @@ export const RESOURCES: RoomResource[] = [
     id: "265",
     floor: Floor.Second,
     title: "CIT 265",
-    notes: "24 / Seminar Room",
+    notes: "25 / Seminar Room",
     managedBy: Managers.MTAs,
     calendarId:
       "c_bc6afcb3083f58ff0dccd2bc9204a3d1691f8cc8caaf3627b149a273e3d55e16@group.calendar.google.com",
@@ -159,7 +159,7 @@ export const RESOURCES: RoomResource[] = [
     id: "269",
     floor: Floor.Second,
     title: "CIT 269",
-    notes: "24 / Seminar Room",
+    notes: "30 / Seminar Room",
     managedBy: Managers.MTAs,
     calendarId:
       "c_edca34404bb08c706b2314217a26e1ad5d2480f52c22bbd4d874ec1bd039a485@group.calendar.google.com",
@@ -222,7 +222,7 @@ export const RESOURCES: RoomResource[] = [
     id: "477",
     floor: Floor.Fourth,
     title: "CIT 477 (Lubrano)",
-    notes: "65 / Classroom",
+    notes: "45 / Classroom, Whiteboards",
     managedBy: Managers.Reception,
     calendarId:
       "brown.edu_43534349544c756272616e6f@resource.calendar.google.com",
@@ -240,7 +240,7 @@ export const RESOURCES: RoomResource[] = [
     id: "506",
     floor: Floor.Fifth,
     title: "CIT 506",
-    notes: "30 / Conference",
+    notes: "30 / Conference, Whiteboards",
     managedBy: Managers.Reception,
     calendarId:
       "brown.edu_4353434954526f6f6d353036@resource.calendar.google.com",

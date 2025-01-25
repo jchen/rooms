@@ -3,6 +3,20 @@
   color: var(--bs-body-color);
 }
 
+@media (max-width: 500px) {
+  .fc-datagrid-cell-main {
+    font-size: 0.73em;
+  }
+  .fc-toolbar-title {
+    text-align: center;
+  }
+}
+
+.fc-resource .fc-icon {
+  display: none;
+}
+
+
 .fc-timeline-slot-cushion:hover {
   text-decoration: none;
   color: var(--bs-body-color);
