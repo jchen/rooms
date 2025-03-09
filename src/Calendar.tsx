@@ -1,10 +1,14 @@
 // organize-imports-disable-next-line
-import FullCalendar, { CssDimValue } from "@fullcalendar/react";
+import FullCalendar from "@fullcalendar/react";
+import { CssDimValue } from "@fullcalendar/core";
 // organize-imports-disable-next-line
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 // organize-imports-disable-next-line
 import resourceTimelinePlugin from "@fullcalendar/resource-timeline";
-import React from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import React, { useEffect, useRef, useState } from "react";
 import tippy from "tippy.js";
 import "tippy.js/themes/light.css";
 import { RESOURCES } from "./config";
@@ -17,28 +21,85 @@ import {
   getResourceNotes
 } from "./utils";
 
-export default class Calendar extends React.Component<{}> {
-  render() {
-    return (
+export default function Calendar() {
+  const calendarRef = useRef<FullCalendar>(null);
+  const [showCalPicker, setShowCalPicker] = useState<boolean>();
+  const [pickedDate, setPickedDate] = useState<Date>();
+
+  useEffect(() => {
+    setPickedDate(calendarRef.current!.getApi().getDate())
+  }, [])
+
+  const goToDate = (date: Date | null) => {
+    if (!date) return;
+    const calendarApi = calendarRef.current?.getApi();
+    if (calendarApi) {
+      calendarApi.gotoDate(date.toISOString().split("T")[0]);
+      setShowCalPicker(false);
+      setPickedDate(date)
+    }
+  };
+
+  const responsiveResourceSize = (): CssDimValue => {
+    return window.screen.width > 500 ? "225px" : "150px";
+  };
+
+  const handleResourceLabelDidMount = (info: any) => {
+    const link = document.createElement("a");
+    link.href = getGoogleCalendarLink(info.resource.title) ?? "";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.innerText = info.resource.title;
+    info.el.querySelector(".fc-datagrid-cell-main").innerHTML = `<a class="roomlink" href="${link.href}" target="${link.target}" rel="${link.rel}">${link.innerText}</a>`;
+
+    const tag = document.createElement("strong");
+    tag.id = info.resource.title.replace(/[^a-zA-Z0-9]/g, "") + "_tag";
+    tag.innerText = ` ${getManagedByTag(info.resource.title)} `;
+    info.el.querySelector(".fc-datagrid-cell-main").appendChild(tag);
+    const combinedContent = `Notes: ${getResourceNotes(info.resource.title)} <br/> ${getManagedByDescription(info.resource.title)}`;
+    tippy(`#${tag.id}`, {
+      content: combinedContent,
+      delay: [200, 0],
+      allowHTML: true,
+      theme: "light",
+      placement: "right",
+    });
+  };
+
+  return (
+    <div>
+      {showCalPicker && (
+        <div className="date-select">
+          <DatePicker
+            selected={pickedDate}
+            showIcon
+            onChange={(date) => {
+              goToDate(date);
+            }}
+          />
+        </div>
+      )}
       <FullCalendar
+        ref={calendarRef}
+        customButtons={{
+          goToDate: {
+            text: showCalPicker ? "Cancel" : "Go to Date",
+            click: () => setShowCalPicker(!showCalPicker),
+          },
+        }}
         schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
         plugins={[resourceTimelinePlugin, googleCalendarPlugin]}
         headerToolbar={{
-          left: "prev,next today",
+          left: "prev,next today goToDate",
           center: "title",
           right: "resourceTimelineDay,resourceTimelineWeek",
         }}
         initialView="resourceTimelineDay"
-        resourceAreaWidth={this.responsiveResourceSize()}
+        resourceAreaWidth={responsiveResourceSize()}
         resourceGroupField="floor"
-        resourceAreaColumns={[
-          {
-            field: "title",
-            headerContent: "Room",
-          },
-        ]}
+        resourceAreaColumns={[{ field: "title", headerContent: "Room" }]}
         resources={RESOURCES.map(createResource)}
-        resourceLabelDidMount={this.handleResourceLabelDidMount}
+        resourceLabelDidMount={handleResourceLabelDidMount}
         googleCalendarApiKey="AIzaSyDe8udGIxRswLCA6GFJOZZbHowpkttvhuw"
         editable={false}
         eventSources={RESOURCES.map(createEventSource)}
@@ -46,36 +107,6 @@ export default class Calendar extends React.Component<{}> {
         height="auto"
         timeZone="America/New_York"
       />
-    );
-  }
-
-  responsiveResourceSize = () => {
-    return window.screen.width > 500 ? "225px" as CssDimValue : "150px" as CssDimValue
-  }
-
-  handleResourceLabelDidMount = (info: any) => {
-    const link = document.createElement("a");
-    link.href = getGoogleCalendarLink(info.resource.title) ?? "";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.innerText = info.resource.title;
-    info.el.querySelector(
-      ".fc-datagrid-cell-main"
-    ).innerHTML = `<a class="roomlink" href="${link.href}" target="${link.target}" rel="${link.rel}">${link.innerText}</a>`;
-
-    var tag = document.createElement("strong");
-    // Set tag's id to the room name, with all symbols stripped
-    tag.id = info.resource.title.replace(/[^a-zA-Z0-9]/g, "") + "_tag";
-    console.log(info);
-    tag.innerText = ` ${getManagedByTag(info.resource.title)} `;
-    info.el.querySelector(".fc-datagrid-cell-main").appendChild(tag);
-    var combined_content = `Notes: ${getResourceNotes(info.resource.title)} <br/> ${getManagedByDescription(info.resource.title)}`;
-    tippy(`#${tag.id}`, {
-      content: combined_content,
-      delay: [200, 0],
-      allowHTML: true,
-      theme: "light",
-      placement: "right",
-    });
-  };
+    </div>
+  );
 }

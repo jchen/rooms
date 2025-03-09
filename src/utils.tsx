@@ -1,3 +1,4 @@
+import Calendar from "./Calendar";
 import { RESOURCES, RoomResource } from "./config";
 
 export function createEventSource(room: RoomResource) {

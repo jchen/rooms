@@ -12,6 +12,10 @@
   }
 }
 
+.fc-datagrid-cell-frame {
+  z-index: 0;
+}
+
 .fc-resource .fc-icon {
   display: none;
 }
@@ -30,4 +34,14 @@
 .roomlink {
   text-decoration: none;
   color: var(--bs-body-color);
+}
+
+.date-select {
+  padding: 1%;
+  z-index: 5;
+  position: relative;
+}
+
+.date-select svg {
+  top: 3.5px;
 }
