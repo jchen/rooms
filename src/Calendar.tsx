@@ -23,7 +23,6 @@ import {
 
 export default function Calendar() {
   const calendarRef = useRef<FullCalendar>(null);
-  const [showCalPicker, setShowCalPicker] = useState<boolean>();
   const [pickedDate, setPickedDate] = useState<Date>();
 
   useEffect(() => {
@@ -35,7 +34,6 @@ export default function Calendar() {
     const calendarApi = calendarRef.current?.getApi();
     if (calendarApi) {
       calendarApi.gotoDate(date.toISOString().split("T")[0]);
-      setShowCalPicker(false);
       setPickedDate(date)
     }
   };
@@ -68,7 +66,7 @@ export default function Calendar() {
 
   return (
     <div>
-      {showCalPicker && (
+      {
         <div className="date-select">
           <DatePicker
             selected={pickedDate}
@@ -78,19 +76,13 @@ export default function Calendar() {
             }}
           />
         </div>
-      )}
+      }
       <FullCalendar
         ref={calendarRef}
-        customButtons={{
-          goToDate: {
-            text: showCalPicker ? "Cancel" : "Go to Date",
-            click: () => setShowCalPicker(!showCalPicker),
-          },
-        }}
         schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
         plugins={[resourceTimelinePlugin, googleCalendarPlugin]}
         headerToolbar={{
-          left: "prev,next today goToDate",
+          left: "prev,next today",
           center: "title",
           right: "resourceTimelineDay,resourceTimelineWeek",
         }}
