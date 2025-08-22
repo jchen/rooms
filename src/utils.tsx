@@ -20,8 +20,7 @@ export function createEventSource(room: RoomResource) {
 
 export function createResource(room: RoomResource) {
   return {
-    // duplicates room name
-    // id: room.id,
+    id: room.id,
     floor: room.floor,
     title: room.title,
     notes: room.notes,
