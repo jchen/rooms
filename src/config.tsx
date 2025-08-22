@@ -75,24 +75,24 @@ export const RESOURCES: RoomResource[] = [
     calendarId:
       "c_c60c30904a6ede56e6422871a4651923b17b7f529380f9a3154bc80e209463f9@group.calendar.google.com",
   },
-  {
-    id: "203",
-    floor: Floor.Second,
-    title: "CIT 203",
-    notes: "3 / Linux",
-    managedBy: Managers.MTAs,
-    calendarId:
-      "c_5230fe91318eb08d328430ea3b18d4a49b1bde03def701c78019b60cc0f63b39@group.calendar.google.com",
-  },
-  {
-    id: "205",
-    floor: Floor.Second,
-    title: "CIT 205",
-    notes: "4 / Linux, Whiteboards",
-    managedBy: Managers.MTAs,
-    calendarId:
-      "c_97716fc018294e495072e7c962d5bba6da5f439bd67a774422c4304ed3230a40@group.calendar.google.com",
-  },
+  // {
+  //   id: "203",
+  //   floor: Floor.Second,
+  //   title: "CIT 203",
+  //   notes: "3 / Linux",
+  //   managedBy: Managers.MTAs,
+  //   calendarId:
+  //     "c_5230fe91318eb08d328430ea3b18d4a49b1bde03def701c78019b60cc0f63b39@group.calendar.google.com",
+  // },
+  // {
+  //   id: "205",
+  //   floor: Floor.Second,
+  //   title: "CIT 205",
+  //   notes: "4 / Linux, Whiteboards",
+  //   managedBy: Managers.MTAs,
+  //   calendarId:
+  //     "c_97716fc018294e495072e7c962d5bba6da5f439bd67a774422c4304ed3230a40@group.calendar.google.com",
+  // },
   {
     id: "207",
     floor: Floor.Second,
@@ -146,15 +146,15 @@ export const RESOURCES: RoomResource[] = [
     calendarId:
       "brown.edu_435343495452434f4e463234313138313032393132333632373535335f42524f574e454455@resource.calendar.google.com",
   },
-  {
-    id: "265",
-    floor: Floor.Second,
-    title: "CIT 265",
-    notes: "25 / Seminar Room",
-    managedBy: Managers.MTAs,
-    calendarId:
-      "c_bc6afcb3083f58ff0dccd2bc9204a3d1691f8cc8caaf3627b149a273e3d55e16@group.calendar.google.com",
-  },
+  // {
+  //   id: "265",
+  //   floor: Floor.Second,
+  //   title: "CIT 265",
+  //   notes: "25 / Seminar Room",
+  //   managedBy: Managers.MTAs,
+  //   calendarId:
+  //     "c_bc6afcb3083f58ff0dccd2bc9204a3d1691f8cc8caaf3627b149a273e3d55e16@group.calendar.google.com",
+  // },
   {
     id: "269",
     floor: Floor.Second,
