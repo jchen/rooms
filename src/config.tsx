@@ -41,14 +41,14 @@ export const RESOURCES: RoomResource[] = [
     calendarId:
       "brown.edu_435343495452524f4f4d3130323138303831373135333633353534325f42524f574e454455@resource.calendar.google.com",
   },
-  {
-    id: "143",
-    floor: Floor.First,
-    title: "CIT 143 (Sunlab)",
-    notes: "135 / Linux",
-    managedBy: Managers.Consultants,
-    calendarId: "brown.edu_435343495453756e6c6162@resource.calendar.google.com",
-  },
+  // {
+  //   id: "143",
+  //   floor: Floor.First,
+  //   title: "CIT 143 (Sunlab)",
+  //   notes: "135 / Linux",
+  //   managedBy: Managers.Consultants,
+  //   calendarId: "brown.edu_435343495453756e6c6162@resource.calendar.google.com",
+  // },
   {
     id: "165",
     floor: Floor.First,
